@@ -2,7 +2,7 @@
 
 A web-based application that assists farmers in predicting the optimal crops to grow and the most suitable fertilizers based on soil and environmental parameters using Machine Learning.
 
-**About**
+**1 About**
 
 CropFit empowers farmers with AI-driven insights for better crop yield and sustainable farming. By entering soil parameters such as Nitrogen (N), Phosphorus (P), Potassium (K), temperature, humidity, pH, and rainfall, users can get:
 
@@ -10,7 +10,7 @@ Recommended crop to plant.
 
 Suggested fertilizer for optimal growth.
 
-**Features**
+**2 Features**
 
 User-friendly and responsive web interface.
 
@@ -25,28 +25,28 @@ Input validation for realistic soil and weather values.
 Mobile-friendly with Bootstrap styling
 
 
-**Clone the repository:**
+**3 Clone the repository:**
 
 git clone https://github.com/Eslavathanil/Crop-Fertilizer-Prediction.git
 cd Crop-Fertilizer-Prediction
 
 
-**Install dependencies:**
+**4 Install dependencies:**
 
 pip install -r requirements.txt
 
 
-**Run the Flask app:**
+**5 Run the Flask app:**
 
 python app.py
 
 
-**Open your browser and go to:**
+**6 Open your browser and go to:**
 
 http://127.0.0.1:5000/
 
 
-**Usage**
+**7 Usage**
 
 You will see the Home Page.
 
@@ -56,13 +56,13 @@ Enter the soil and environmental parameters, then click Predict.
 
 View the predicted crop and recommended fertilizer.
 
-**Models**
+**8 Models**
 
 Naive Bayes (naive_bayes_model.pkl): Predicts the suitable crop based on all parameters.
 
 Random Forest (random_forest_model.pkl): Predicts the recommended fertilizer based on N, P, K.
 
-**Technologies**
+**9 Technologies**
 
 Python 3.x
 
@@ -74,7 +74,7 @@ HTML, CSS, Bootstrap 5 (Frontend)
 
 Font Awesome Icons
 
-**Deployment**
+**10 Deployment**
 
 This application is deployed on Render. To deploy your own Flask app on Render, follow these steps:
 GitHub
@@ -93,15 +93,16 @@ Deploy and monitor the build process. Once completed, your app will be live at a
 For more detailed instructions, refer to the Render Flask Deployment Guide
 .
 
-**Live Demo**
+**11 Live Demo**
 
 Experience the live demo of the application here:
 
 👉 https://crop-fertilizer-prediction-ilfr.onrender.com
 
-**License**
+**12 License**
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 
 
