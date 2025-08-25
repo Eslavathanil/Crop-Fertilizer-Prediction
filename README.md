@@ -2,7 +2,6 @@
 
 A **web-based application** that helps farmers predict the **best crops** to grow and the **most suitable fertilizers** based on soil and environmental parameters using Machine Learning.
 
----
 
 ## Table of Contents
 - [About](#about)
@@ -14,7 +13,6 @@ A **web-based application** that helps farmers predict the **best crops** to gro
 - [Technologies](#technologies)
 - [License](#license)
 
----
 
 ## About
 CropFit empowers farmers with AI-driven insights for better crop yield and sustainable farming. By entering soil parameters such as Nitrogen (N), Phosphorus (P), Potassium (K), temperature, humidity, pH, and rainfall, users can get:
@@ -22,7 +20,6 @@ CropFit empowers farmers with AI-driven insights for better crop yield and susta
 - Recommended **crop** to plant.
 - Suggested **fertilizer** for optimal growth.
 
----
 
 ## Features
 - User-friendly and responsive **web interface**.
@@ -32,71 +29,10 @@ CropFit empowers farmers with AI-driven insights for better crop yield and susta
 - Input validation for realistic soil and weather values.
 - Mobile-friendly with **Bootstrap** styling.
 
----
-
-## Folder Structure
-crop_recommendation/
-│── static/                     # Static assets (CSS, JS, images, etc.)
-│    ├── css/
-│    │   ├── home.css           # Styling for home.html
-│    │   └── index.css          # Styling for index.html (login/landing)
-│    └── images/                # Store all project images here
-│         └── (your images here)
-│
-│── templates/                  # HTML templates (Jinja2 for Flask)
-│    ├── home.html              # Homepage (after login, predictions, UI)
-│    └── index.html             # Landing/Login page
-│
-│── dataset/                    # Dataset storage (CSV, Excel, etc.)
-│
-│── model/                      # Pre-trained ML models
-│    ├── naive_bayes_model.pkl  # Saved Naive Bayes model
-│    └── random_forest_model.pkl# Saved Random Forest model
-│
-│── app.py                      # Main Flask application
-│── requirement.txt             # Python dependencies
-
-
----
-
 ## Installation
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/Eslavathanil/Crop-Fertilizer-Prediction.git
 cd Crop-Fertilizer-Prediction
-Usage
 
-Run the Flask app:
-
-python app.py
-
-
-Open your browser and go to:
-
-http://127.0.0.1:5000/
-
-
-You will see the Home Page. Click Get Started to go to the prediction page.
-
-Enter the soil and environmental parameters, then click Predict.
-
-View the predicted crop and recommended fertilizer.
-
-##Models
-
-Naive Bayes (naive_bayes_model.pkl) → Predicts suitable crop based on all parameters.
-
-Random Forest (random_forest_model.pkl) → Predicts recommended fertilizer based on N, P, K.
-
-Technologies Used
-
-Python 3.x
-
-## Flask (Web Framework)
-
-NumPy, pickle (ML model handling)
-
-HTML, CSS, Bootstrap 5 (Frontend)
-
-Font Awesome Icons
