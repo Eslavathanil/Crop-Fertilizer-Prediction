@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crop & Fertilizer Prediction</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="../static/css/index.css">
+  
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h2><a href="index.html"><i class="fa fa-leaf"></i> CropFit</a></h2>
+    <nav>
+      <a href="{{ url_for('home') }}">Dashboard</a>
+      <a href="{{ url_for('home') }}">Services</a>
+      <a href="{{ url_for('home') }}">About</a>
+    </nav>
+  </header>
+
+  <!-- Form Card -->
+  <div class="form-container">
+    <h2>🌱 Enter Soil Parameters</h2>
+    <form name="cropForm" method="POST" onsubmit="return validateForm()">
+      <input type="number" name="N" placeholder="Nitrogen (0-100)" required min="0" max="100" step="0.01">
+      <input type="number" name="P" placeholder="Phosphorus (0-100)" required min="0" max="100" step="0.01">
+      <input type="number" name="K" placeholder="Potassium (0-100)" required min="0" max="100" step="0.01">
+      <input type="number" name="temperature" placeholder="Temperature (0-100)" required min="0" max="100" step="0.01">
+      <input type="number" name="humidity" placeholder="Humidity (0-100)" required min="0" max="100" step="0.01">
+      <input type="number" name="ph" placeholder="pH Value (0-14)" required min="0" max="14" step="0.01">
+      <input type="number" name="rainfall" placeholder="Rainfall (0-100)" required min="0" max="100" step="0.01">
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if crop_prediction %}
+    <div class="result">Predicted Crop: {{ crop_prediction }}</div>
+    <div class="result">Recommended Fertilizer: {{ fertilizer_prediction }}</div>
+    {% endif %}
+
+    {% if error %}
+    <div class="error">Error: {{ error }}</div>
+    {% endif %}
+  </div>
+
+  <script>
+    function validateForm() {
+      let N = parseFloat(document.forms["cropForm"]["N"].value);
+      let P = parseFloat(document.forms["cropForm"]["P"].value);
+      let K = parseFloat(document.forms["cropForm"]["K"].value);
+      let temperature = parseFloat(document.forms["cropForm"]["temperature"].value);
+      let humidity = parseFloat(document.forms["cropForm"]["humidity"].value);
+      let ph = parseFloat(document.forms["cropForm"]["ph"].value);
+      let rainfall = parseFloat(document.forms["cropForm"]["rainfall"].value);
+
+      if (N < 0 || N > 100) { alert("Nitrogen must be between 0 and 100."); return false; }
+      if (P < 0 || P > 100) { alert("Phosphorus must be between 0 and 100."); return false; }
+      if (K < 0 || K > 100) { alert("Potassium must be between 0 and 100."); return false; }
+      if (temperature < 0 || temperature > 100) { alert("Temperature must be between 0 and 100."); return false; }
+      if (humidity < 0 || humidity > 100) { alert("Humidity must be between 0 and 100."); return false; }
+      if (ph < 0 || ph > 14) { alert("pH value must be between 0 and 14."); return false; }
+      if (rainfall < 0 || rainfall > 100) { alert("Rainfall must be between 0 and 100."); return false; }
+      return true;
+    }
+  </script>
+</body>
+</html>
