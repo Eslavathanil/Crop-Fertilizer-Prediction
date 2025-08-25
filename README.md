@@ -2,28 +2,6 @@
 
 A web-based application that assists farmers in predicting the optimal crops to grow and the most suitable fertilizers based on soil and environmental parameters using Machine Learning.
 
-**Table of Contents**
-
-About
-
-Features
-
-Folder Structure
-
-Installation
-
-Usage
-
-Models
-
-Technologies
-
-Deployment
-
-Live Demo
-
-License
-
 **About**
 
 CropFit empowers farmers with AI-driven insights for better crop yield and sustainable farming. By entering soil parameters such as Nitrogen (N), Phosphorus (P), Potassium (K), temperature, humidity, pH, and rainfall, users can get:
@@ -46,28 +24,6 @@ Input validation for realistic soil and weather values.
 
 Mobile-friendly with Bootstrap styling
 
-**Folder Structure**
-crop_recommendation/
-│── static/                     # Static assets (CSS, JS, images, etc.)
-│    ├── css/
-│    │   ├── home.css           # Styling for home.html
-│    │   └── index.css          # Styling for index.html (login/landing)
-│    └── images/                # Store all project images here
-│         └── (your images here)
-│
-│── templates/                  # HTML templates (Jinja2 for Flask)
-│    ├── home.html              # Homepage (after login, predictions, UI)
-│    └── index.html             # Landing/Login page
-│
-│── dataset/                    # Dataset storage (CSV, Excel, etc.)
-│
-│── model/                      # Pre-trained ML models
-│    ├── naive_bayes_model.pkl  # Saved Naive Bayes model
-│    └── random_forest_model.pkl# Saved Random Forest model
-│
-│── app.py                      # Main Flask application
-│── requirement.txt             # Python dependencies
-**Installation**
 
 **Clone the repository:**
 
@@ -146,6 +102,7 @@ Experience the live demo of the application here:
 **License**
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 
 
